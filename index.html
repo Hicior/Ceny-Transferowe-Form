@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ankieta Cen Transferowych</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import Montserrat font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Ankieta Cen Transferowych</h1>
+    <form id="transferForm">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="card-container">
+        <!-- Intro section -->
+        <div class="card intro-card active" id="intro-card">
+          <div class="intro-content">
+            <p>Ta ankieta pomoże Ci ustalić, czy masz obowiązek przygotowania dokumentacji cen transferowych.</p>
+            <p>Ankieta składa się z kilku prostych pytań dotyczących transakcji w Twojej działalności.</p>
+            <button type="button" id="start-button" class="start-button">Rozpocznij Ankietę</button>
+          </div>
+        </div>
+        <!-- Questions section -->
+        <div class="card" id="q1-card">
+          <div class="question" id="q1">
+            <label for="q1">Czy dochodzi w Pana/Pani działalności do transakcji z podmiotami powiązanymi?</label>
+            <p>Transakcje z podmiotami powiązanymi to np. świadczenie usług przez wspólnika na rzecz spółki, transakcje między działalnościami małżonków lub innych członków rodziny lub transakcje między spółkami powiązanymi kapitałowo.</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q1" value="TAK" required> TAK</label>
+              <label><input type="radio" name="q1" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q2-card">
+          <div class="question" id="q2">
+            <label for="q2">Czy w poprzednim roku podatkowym (2023 r.) miały miejsce transakcje z podmiotami powiązanymi, które dotyczyły transakcji finansowych a ich wartość przekroczyła 10 mln zł netto?</label>
+            <p>np. pożyczka, kredyt, poręczenie, gwarancja</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q2" value="TAK"> TAK</label>
+              <label><input type="radio" name="q2" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q3-card">
+          <div class="question" id="q3">
+            <label for="q3">Czy w poprzednim roku podatkowym (2023 r.) miały miejsce transakcje z podmiotami powiązanymi, które dotyczyły transakcji towarowych a ich wartość przekroczyła 10 mln zł netto?</label>
+            <p>Bierzemy pod uwagę zarówno zakup jak i sprzedaż towarów. Limit jest odrębny dla zakupów oraz dla sprzedaży.</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q3" value="TAK"> TAK</label>
+              <label><input type="radio" name="q3" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q4-card">
+          <div class="question" id="q4">
+            <label for="q4">Czy w poprzednim roku podatkowym (2023 r.) miały miejsce transakcje z podmiotami powiązanymi, które dotyczyły transakcji usługowych, a ich wartość przekroczyła 2 mln zł netto?</label>
+            <p>Bierzemy pod uwagę zarówno zakup jak i sprzedaż usług. Limit jest odrębny dla zakupów oraz dla sprzedaży.</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q4" value="TAK"> TAK</label>
+              <label><input type="radio" name="q4" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q5-card">
+          <div class="question" id="q5">
+            <label for="q5">Czy w poprzednim roku podatkowym (2023 r.) miały miejsce inne transakcje z podmiotami powiązanymi niż finansowe, towarowe oraz usługowe, których wartość przekroczyła 2 mln zł netto?</label>
+            <div class="radio-group">
+              <label><input type="radio" name="q5" value="TAK"> TAK</label>
+              <label><input type="radio" name="q5" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q6-card">
+          <div class="question" id="q6">
+            <label for="q6">Czy dochodzi w Pana/Pani działalności do transakcji z podmiotami (powiązanymi i niepowiązanymi), które mają siedzibę w "raju podatkowym"?</label>
+            <p>np. Brytyjskie Wyspy Dziewicze, Hongkong, Panama, Seszele, Monako</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q6" value="TAK" required> TAK</label>
+              <label><input type="radio" name="q6" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q7-card">
+          <div class="question" id="q7">
+            <label for="q7">Czy w poprzednim roku podatkowym (2023 r.) miały miejsce transakcje finansowe z podmiotami z rajów podatkowych, których wartość przekroczyła 2,5 mln zł?</label>
+            <p>np. pożyczka, kredyt, poręczenie, gwarancja</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q7" value="TAK"> TAK</label>
+              <label><input type="radio" name="q7" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="q8-card">
+          <div class="question" id="q8">
+            <label for="q8">Czy w poprzednim roku podatkowym (2023 r.) miały miejsce transakcje inne niż transakcje finansowe z podmiotami z rajów podatkowych, których wartość przekroczyła 500 000 zł netto?</label>
+            <p>np. transakcje usługowe lub towarowe</p>
+            <div class="radio-group">
+              <label><input type="radio" name="q8" value="TAK"> TAK</label>
+              <label><input type="radio" name="q8" value="NIE"> NIE</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
