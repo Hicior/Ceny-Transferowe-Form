@@ -129,18 +129,18 @@ document.addEventListener("DOMContentLoaded", function() {
             ${obligation ? `
               <div class="result-header">
                 <div class="result-icon negative">!</div>
-                <h2>Wymagana Dokumentacja</h2>
+                <h2>Wymagana dokumentacja</h2>
               </div>
               <div class="result-section">
-                <h3>Wynik Ankiety</h3>
+                <h3>Wynik ankiety</h3>
                 <p>Wynik ankiety wskazuje, że ma Pan/Pani obowiązek dokumentacyjny w zakresie cen transferowych.</p>
               </div>
               <div class="result-section">
-                <h3>Następne Kroki</h3>
+                <h3>Następne kroki</h3>
                 <p>Zalecamy dokonanie weryfikacji, jakiego rodzaju dokumentacja powinna zostać sporządzona.</p>
               </div>
               <div class="result-section">
-                <h3>Potrzebujesz Pomocy?</h3>
+                <h3>Potrzebujesz pomocy?</h3>
                 <p>Skorzystaj z formularza kontaktowego lub umów konsultację.</p>
                 <div class="button-group">
                   <a href="https://mentzen.pl/dane-kontaktowe/" class="button-link" target="_blank">Formularz Kontaktowy</a>
@@ -150,14 +150,14 @@ document.addEventListener("DOMContentLoaded", function() {
             ` : `
               <div class="result-header">
                 <div class="result-icon positive">✓</div>
-                <h2>Brak Obowiązku Dokumentacyjnego</h2>
+                <h2>Brak obowiązku dokumentacyjnego</h2>
               </div>
               <div class="result-section">
-                <h3>Wynik Ankiety</h3>
+                <h3>Wynik ankiety</h3>
                 <p>Wynik ankiety wskazuje, że nie ma Pan/Pani obowiązków dokumentacyjnych w zakresie cen transferowych.</p>
               </div>
               <div class="result-section">
-                <h3>Potrzebujesz Pomocy?</h3>
+                <h3>Potrzebujesz pomocy?</h3>
                 <p>Skorzystaj z formularza kontaktowego lub umów konsultację.</p>
                 <div class="button-group">
                   <a href="https://mentzen.pl/dane-kontaktowe/" class="button-link" target="_blank">Formularz Kontaktowy</a>
