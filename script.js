@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
               </div>
               <div class="result-section">
                 <h3>Wynik ankiety</h3>
-                <p>Wynik ankiety wskazuje, że ma Pan/Pani obowiązek dokumentacyjny w zakresie cen transferowych.</p>
+                <p>Wynik ankiety wskazuje, że masz obowiązek dokumentacyjny w zakresie cen transferowych.</p>
               </div>
               <div class="result-section">
                 <h3>Następne kroki</h3>
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
               </div>
               <div class="result-section">
                 <h3>Wynik ankiety</h3>
-                <p>Wynik ankiety wskazuje, że nie ma Pan/Pani obowiązków dokumentacyjnych w zakresie cen transferowych.</p>
+                <p>Wynik ankiety wskazuje, że nie masz obowiązków dokumentacyjnych w zakresie cen transferowych.</p>
               </div>
               <div class="result-section">
                 <h3>Potrzebujesz pomocy?</h3>
