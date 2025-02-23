@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+:root {
+  font-size: 14px;
+}
+
 body {
   min-height: 100vh;
 }
@@ -21,22 +25,21 @@ body {
   font-family: "InstrumentSans", Helvetica, Arial, Lucida, sans-serif;
   background-color: #fff;
   margin: 0;
-  padding: clamp(10px, 2vw, 20px);
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .ceny-transferowe-wrapper {
-  max-width: min(800px, 100%);
+  max-width: min(700px, 100%);
   margin: clamp(5px, 2vw, 20px);
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgb(69 69 69 / 15%) 0px 0px 0px 1px;
   padding: clamp(20px, 4vw, 40px);
   transition: opacity 0.4s ease;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .ceny-transferowe-wrapper::before {
@@ -67,9 +70,10 @@ body {
   text-align: center;
   color: #1b191a;
   margin-bottom: clamp(20px, 4vw, 40px);
-  font-size: clamp(1.5em, 4vw, 2.2em);
+  font-size: clamp(1.5em, 4vw, 3em);
   position: relative;
   padding-bottom: 15px;
+  font-weight: 800;
 }
 
 .ceny-transferowe-wrapper h1::after {
@@ -98,13 +102,14 @@ body {
   display: block;
   font-weight: 600;
   margin-bottom: 16px;
-  font-size: clamp(0.95em, 2.5vw, 1.1em);
+  font-size: clamp(1.2em, 2.5vw, 1.5em);
   line-height: 1.5;
   color: #1b191a;
 }
 
 .ceny-transferowe-wrapper .question p {
-  font-size: clamp(0.85em, 2.2vw, 0.95em);
+  font-size: clamp(0.95em, 2.2vw, 1.1em);
+  font-weight: 400;
   color: #1b191a;
   margin: 12px 0 20px;
   line-height: 1.6;
@@ -164,8 +169,8 @@ body {
   cursor: pointer;
   text-decoration: none;
   margin: 12px;
+  font-size: 16px;
   font-weight: 600;
-  font-size: clamp(0.95em, 2.2vw, 1.05em);
   letter-spacing: 0.3px;
   display: inline-flex;
   align-items: center;
@@ -272,7 +277,8 @@ body {
 
 .ceny-transferowe-wrapper .result-header h2 {
   color: #1b191a;
-  font-size: 1.8em;
+  font-size: clamp(1.8em, 3.5vw, 2.6em);
+  font-weight: 600;
   margin: 0;
 }
 
@@ -287,13 +293,16 @@ body {
 .ceny-transferowe-wrapper .result-section h3 {
   color: #1b191a;
   margin: 0 0 16px 0;
-  font-size: 1.2em;
+  font-size: clamp(1.4em, 2.2vw, 1.7em);
+  font-weight: 600;
 }
 
 .ceny-transferowe-wrapper .result-section p {
   margin: 0;
   line-height: 1.6;
   color: #1b191a;
+  font-size: clamp(1.2em, 2.2vw, 1.3em);
+  font-weight: 400;
 }
 
 .ceny-transferowe-wrapper .button-group {
@@ -315,7 +324,8 @@ body {
   color: #1b191a;
   line-height: 1.6;
   margin-bottom: 16px;
-  font-size: clamp(1em, 2.2vw, 1.1em);
+  font-size: clamp(1.2em, 2vw, 1.6em);
+  font-weight: 400;
 }
 
 /* ======================================== */
@@ -330,6 +340,7 @@ body {
 
   .ceny-transferowe-wrapper {
     margin: 0;
+    padding: 0;
   }
 
   .ceny-transferowe-wrapper .card-container {
@@ -354,16 +365,8 @@ body {
     max-width: 100%;
   }
 
-  .ceny-transferowe-wrapper .result-header h2 {
-    font-size: clamp(1.4em, 4vw, 1.8em);
-  }
-
   .ceny-transferowe-wrapper .result-section {
     padding: clamp(16px, 3vw, 24px);
-  }
-
-  .ceny-transferowe-wrapper .result-section h3 {
-    font-size: clamp(1.1em, 3vw, 1.2em);
   }
 
   .ceny-transferowe-wrapper .button-group {
@@ -384,10 +387,6 @@ body {
 
 /* Small screens */
 @media (max-width: 480px) {
-  .ceny-transferowe-wrapper {
-    padding: 16px;
-  }
-
   .ceny-transferowe-wrapper .progress-bar {
     margin-bottom: 24px;
   }
@@ -419,7 +418,6 @@ body {
 @media (max-height: 500px) and (orientation: landscape) {
   .ceny-transferowe-container {
     align-items: flex-start;
-    padding: 10px;
   }
 
   .ceny-transferowe-wrapper {
