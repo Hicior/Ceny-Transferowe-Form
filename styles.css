@@ -11,6 +11,11 @@
 
 :root {
   font-size: 14px;
+  --primary-color: #0d2d46;
+  --text-color: #1b191a;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
 body {
@@ -23,23 +28,25 @@ body {
 
 .ceny-transferowe-container {
   font-family: "InstrumentSans", Helvetica, Arial, Lucida, sans-serif;
-  background-color: #fff;
   margin: 0;
-  padding: 20px 0;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .ceny-transferowe-wrapper {
-  max-width: min(700px, 100%);
+  max-width: min(800px, 100%);
   margin: clamp(5px, 2vw, 20px);
-  background: #fff;
-  padding: clamp(20px, 4vw, 40px);
+  background: #ffffff;
+  padding: clamp(24px, 5vw, 48px);
   transition: opacity 0.4s ease;
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .ceny-transferowe-wrapper::before {
@@ -68,12 +75,14 @@ body {
 /* ======================================== */
 .ceny-transferowe-wrapper h1 {
   text-align: center;
-  color: #1b191a;
-  margin-bottom: clamp(20px, 4vw, 40px);
-  font-size: clamp(1.5em, 4vw, 3em);
+  color: var(--text-color);
+  margin-bottom: clamp(24px, 5vw, 48px);
+  font-size: clamp(1.8em, 5vw, 2.6em);
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .ceny-transferowe-wrapper h1::after {
@@ -82,9 +91,9 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 80px;
   height: 4px;
-  background-color: #1b191a;
+  background-color: var(--primary-color);
   border-radius: 2px;
 }
 
@@ -92,31 +101,31 @@ body {
 /*             Question Styles              */
 /* ======================================== */
 .ceny-transferowe-wrapper .question {
-  margin-bottom: 30px;
-}
-
-.ceny-transferowe-wrapper .question.visible {
+  margin-bottom: 36px;
+  background-color: #ffffff;
+  padding: 24px;
 }
 
 .ceny-transferowe-wrapper .question label {
   display: block;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: clamp(1.2em, 2.5vw, 1.5em);
   line-height: 1.5;
-  color: #1b191a;
+  color: var(--text-color);
 }
 
 .ceny-transferowe-wrapper .question p {
   font-size: clamp(0.95em, 2.2vw, 1.1em);
   font-weight: 400;
-  color: #1b191a;
-  margin: 12px 0 20px;
-  line-height: 1.6;
+  color: var(--text-color);
+  margin: 16px 0 24px;
+  line-height: 1.7;
   background: #f8f9fa;
-  padding: clamp(8px, 2vw, 16px);
-  border-radius: 8px;
-  border-left: 4px solid #0d2d46;
+  padding: clamp(12px, 2.5vw, 18px);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 /* ======================================== */
@@ -124,26 +133,32 @@ body {
 /* ======================================== */
 .ceny-transferowe-wrapper .radio-group {
   display: flex;
-  gap: clamp(8px, 2vw, 16px);
-  margin: 20px 0;
+  gap: clamp(12px, 2.5vw, 20px);
+  margin: 24px 0;
 }
 
 .ceny-transferowe-wrapper .radio-group label {
   flex: 1;
   cursor: pointer;
-  padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 24px);
+  padding: clamp(12px, 2.5vw, 16px) clamp(16px, 3vw, 28px);
   border: 2px solid #e0e0e0;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: var(--transition);
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  margin-bottom: 0;
+  font-size: 1.1em;
 }
 
 .ceny-transferowe-wrapper .radio-group label:hover {
   border-color: #181818;
   background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
 }
 
 .ceny-transferowe-wrapper .radio-group input[type="radio"] {
@@ -151,9 +166,10 @@ body {
 }
 
 .ceny-transferowe-wrapper .radio-group input[type="radio"]:checked + label {
-  background-color: #181818;
+  background-color: var(--primary-color);
   color: white;
-  border-color: #181818;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(13, 45, 70, 0.2);
 }
 
 /* ======================================== */
@@ -165,29 +181,41 @@ body {
   background-color: #fff;
   color: #181818;
   border: 1px solid #181818;
-  padding: clamp(12px, 2.5vw, 14px) clamp(20px, 4vw, 28px);
+  padding: clamp(12px, 2.5vw, 16px) clamp(20px, 4vw, 32px);
   cursor: pointer;
   text-decoration: none;
-  margin: 12px;
+  margin: 16px;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: clamp(140px, 30vw, 160px);
-  transition: all 300ms ease 0ms;
+  min-width: clamp(140px, 30vw, 180px);
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .ceny-transferowe-wrapper button:hover,
 .ceny-transferowe-wrapper .button-link:hover {
-  transform: scaleX(1.05) scaleY(1.05);
-  box-shadow: inset 3px 0px 0px 0px #181818;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #181818;
+  color: #ffffff;
 }
 
 /* Start Button Styles */
 .ceny-transferowe-wrapper .start-button {
-  margin: 32px 12px 12px;
+  margin: 36px 0 0 0;
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.ceny-transferowe-wrapper .start-button:hover {
+  background-color: #194569;
+  border-color: #194569;
 }
 
 /* ======================================== */
@@ -195,8 +223,8 @@ body {
 /* ======================================== */
 .ceny-transferowe-wrapper .card-container {
   position: relative;
-  min-height: 300px;
-  margin: 40px 0;
+  min-height: 320px;
+  margin: 48px 0;
 }
 
 .ceny-transferowe-wrapper .card {
@@ -226,18 +254,19 @@ body {
 .ceny-transferowe-wrapper .progress-bar {
   display: none;
   width: 100%;
-  height: 6px;
+  height: 8px;
   background: #eee;
-  margin-bottom: 40px;
-  border-radius: 3px;
+  margin-bottom: 48px;
+  border-radius: 4px;
   overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .ceny-transferowe-wrapper .progress {
   width: 0%;
   height: 100%;
-  background: #0d2d46;
-  border-radius: 3px;
+  background: var(--primary-color);
+  border-radius: 4px;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -245,26 +274,27 @@ body {
 /*            Result Page Styles            */
 /* ======================================== */
 .ceny-transferowe-wrapper .result-content {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
 .ceny-transferowe-wrapper .result-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .ceny-transferowe-wrapper .result-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 24px;
   font-size: 40px;
   font-weight: bold;
   color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ceny-transferowe-wrapper .result-icon.positive {
@@ -276,39 +306,42 @@ body {
 }
 
 .ceny-transferowe-wrapper .result-header h2 {
-  color: #1b191a;
+  color: var(--text-color);
   font-size: clamp(1.8em, 3.5vw, 2.6em);
   font-weight: 600;
   margin: 0;
+  line-height: 1.3;
 }
 
 .ceny-transferowe-wrapper .result-section {
-  background: white;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgb(69 69 69 / 9%) 0px 0px 0px 1px;
+  background: #ffffff;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .ceny-transferowe-wrapper .result-section h3 {
-  color: #1b191a;
-  margin: 0 0 16px 0;
+  color: var(--text-color);
+  margin: 0 0 20px 0;
   font-size: clamp(1.4em, 2.2vw, 1.7em);
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .ceny-transferowe-wrapper .result-section p {
-  margin: 0;
-  line-height: 1.6;
-  color: #1b191a;
-  font-size: clamp(1.2em, 2.2vw, 1.3em);
+  margin: 0 0 16px;
+  line-height: 1.7;
+  color: var(--text-color);
+  font-size: clamp(1.1em, 2.2vw, 1.25em);
   font-weight: 400;
 }
 
 .ceny-transferowe-wrapper .button-group {
   display: flex;
-  gap: 16px;
-  margin: 20px 0;
+  gap: 20px;
+  margin: 28px 0;
   justify-content: center;
 }
 
@@ -317,14 +350,16 @@ body {
 /* ======================================== */
 .ceny-transferowe-wrapper .intro-content {
   text-align: center;
-  padding: 20px 0;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
 }
 
 .ceny-transferowe-wrapper .intro-content p {
-  color: #1b191a;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  font-size: clamp(1.2em, 2vw, 1.6em);
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: clamp(1.2em, 3vw, 1.4em);
   font-weight: 400;
 }
 
@@ -339,21 +374,22 @@ body {
   }
 
   .ceny-transferowe-wrapper {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 20px;
   }
 
   .ceny-transferowe-wrapper .card-container {
-    min-height: 400px;
+    min-height: 420px;
   }
 
   .ceny-transferowe-wrapper .question {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    padding: 20px;
   }
 
   .ceny-transferowe-wrapper .radio-group {
     flex-direction: column;
-    margin: 16px 0;
+    margin: 20px 0;
   }
 
   .ceny-transferowe-wrapper .radio-group label {
@@ -366,12 +402,12 @@ body {
   }
 
   .ceny-transferowe-wrapper .result-section {
-    padding: clamp(16px, 3vw, 24px);
+    padding: clamp(20px, 3vw, 24px);
   }
 
   .ceny-transferowe-wrapper .button-group {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
 
   .ceny-transferowe-wrapper .button-link {
@@ -381,7 +417,10 @@ body {
 
   .ceny-transferowe-wrapper .start-button {
     width: 100%;
-    margin: 32px 0 0 0 !important;
+  }
+
+  .ceny-transferowe-wrapper .intro-content {
+    padding: 20px;
   }
 }
 
@@ -396,8 +435,8 @@ body {
   }
 
   .ceny-transferowe-wrapper .result-icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     font-size: 30px;
   }
 }
@@ -410,7 +449,7 @@ body {
   }
 
   .ceny-transferowe-wrapper .card-container {
-    min-height: 350px;
+    min-height: 370px;
   }
 }
 
@@ -429,15 +468,16 @@ body {
   }
 
   .ceny-transferowe-wrapper .card-container {
-    min-height: 300px;
+    min-height: 320px;
   }
 
   .ceny-transferowe-wrapper .question {
     margin-bottom: 15px;
+    padding: 16px;
   }
 
   .ceny-transferowe-wrapper .radio-group {
     flex-direction: row;
-    margin: 10px 0;
+    margin: 12px 0;
   }
 }
